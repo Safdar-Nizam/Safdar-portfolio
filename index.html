@@ -5,144 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Safdar Nizam | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Safdar Nizam</h1>
-            <p>Web Developer | Designer | Programmer</p>
-            <button id="dark-mode-toggle">🌙</button>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+        <h1>Safdar Nizam</h1>
+        <p>Web Developer | Designer | Programmer</p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <span>🌙</span>
         </div>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a passionate developer specializing in front-end and back-end web development. I create modern, responsive, and high-performing websites.</p>
-        </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a passionate developer specializing in front-end and back-end web development. I create modern, responsive, and high-performing websites.</p>
     </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill">HTML & CSS</div>
-                <div class="skill">JavaScript</div>
-                <div class="skill">React.js</div>
-                <div class="skill">Node.js</div>
-                <div class="skill">Python</div>
-                <div class="skill">SQL & Databases</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Financial Health Prediction</h3>
-                    <p>Developed a machine learning model to analyze financial stability.</p>
-                </div>
-                <div class="portfolio-item">
-                    <img src="project2.jpg" alt="Project 2">
-                    <h3>Clustering with Self-Attention</h3>
-                    <p>Implemented self-attention in clustering algorithms for better accuracy.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <form action="https://formspree.io/f/mnqyekna" method="POST">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
-        </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>Python</li>
+            <li>SQL & Databases</li>
+        </ul>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Safdar Nizam. All rights reserved.</p>
-        </div>
+        <p>&copy; 2024 Safdar Nizam. All rights reserved.</p>
     </footer>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            transition: background 0.3s, color 0.3s;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        #dark-mode-toggle {
-            background: transparent;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-            color: white;
-            position: absolute;
-            right: 20px;
-            top: 20px;
-        }
-        .section {
-            padding: 60px 0;
-            text-align: center;
-        }
-        .portfolio-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .portfolio-item {
-            width: 30%;
-            padding: 10px;
-        }
-        .portfolio-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-    </style>
-    
-    <script>
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 </body>
 </html>
