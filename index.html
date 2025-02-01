@@ -3,52 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safdar's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Safdar Nizam | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
 </head>
 <body>
     <header>
-        <h1>Safdar</h1>
-        <p>Master's in Computer Science | Data Science | Java Developer</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#resume">Resume</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1>Safdar Nizam</h1>
+            <p>Web Developer | Designer | Programmer</p>
+            <button id="dark-mode-toggle">🌙</button>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate computer science student at FAU, specializing in Java Spring Boot and Data Science.</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Financial Health Prediction</h3>
-            <p>Developed an ML model to predict company financial stability using Python.</p>
-        </div>
-        <div class="project">
-            <h3>Clustering Gaussian Points with Self-Attention</h3>
-            <p>Explored deep learning techniques to improve clustering performance.</p>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm a passionate developer specializing in front-end and back-end web development. I create modern, responsive, and high-performing websites.</p>
         </div>
     </section>
 
-    <section id="resume">
-        <h2>Resume</h2>
-        <a href="resume.pdf" download>Download Resume</a>
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React.js</div>
+                <div class="skill">Node.js</div>
+                <div class="skill">Python</div>
+                <div class="skill">SQL & Databases</div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:safdar@example.com">safdar@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/safdar" target="_blank">github.com/safdar</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/safdar" target="_blank">linkedin.com/in/safdar</a></p>
+    <section id="portfolio" class="section">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Financial Health Prediction</h3>
+                    <p>Developed a machine learning model to analyze financial stability.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Clustering with Self-Attention</h3>
+                    <p>Implemented self-attention in clustering algorithms for better accuracy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/mnqyekna" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 Safdar. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Safdar Nizam. All rights reserved.</p>
+        </div>
     </footer>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background 0.3s, color 0.3s;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        #dark-mode-toggle {
+            background: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
+            color: white;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        .section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        .portfolio-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .portfolio-item {
+            width: 30%;
+            padding: 10px;
+        }
+        .portfolio-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    
+    <script>
+        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
